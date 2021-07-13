@@ -37,8 +37,8 @@ app.use(cors({
       callback(null, true)
     } else {
       // 如果不是開發環境
-      // 如果請求不是找不到且來自'github'
-      if (origin !== undefined && origin.includes('github')) {
+      // 如果請求是找不到且來自'github'
+      if (origin === undefined || origin.includes('github')) {
         // 允許請求
         callback(null, true)
       } else {
