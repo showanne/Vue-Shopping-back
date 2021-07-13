@@ -32,7 +32,7 @@ app.use(cors({
   // origin 為請求來源網域, callback 為是否允許的回應
   origin (origin, callback) {
     // 如果是開發環境
-    if (process.env.DEV) {
+    if (process.env.DEV === 'true') {
       // 允許任何來源網域的請求
       callback(null, true)
     } else {
